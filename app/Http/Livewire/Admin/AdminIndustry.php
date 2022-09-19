@@ -46,6 +46,7 @@ class AdminIndustry extends Component
     $this->name = '';
     $this->slug = '';
     $this->photo = null;
+    $this->deleteId = null;
   }
 
   public function store()

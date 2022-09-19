@@ -48,8 +48,7 @@
 																		alt="{{ Auth::user()->name }}" />
 														</button>
 
-														<ul x-show="open" @click.away="open = false"
-																class="absolute text-gray-700 top-12 right-1/2 translate-x-1/2 bg-white rounded-md shadow overflow-hidden">
+														<ul x-show="open" @click.away="open = false" class="absolute text-gray-700 top-12 right-1/2 translate-x-1/2 bg-white rounded-md shadow overflow-hidden">
 																<li>
 																		<span class="rounded-t-md py-3 px-16 block whitespace-nowrap font-bold">{{ Auth::user()->email }}
 																		</span>
