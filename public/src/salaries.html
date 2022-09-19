@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <script src="../tailwindcss.min.js"></script>
+  <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+  <script src="https://kit.fontawesome.com/40c495c7a8.js" crossorigin="anonymous"></script>
+  <style type="tailwind/text">
+  </style>
+</head>
+
+<body>
+  <nav class="bg-blue-50 shadow shadow-blue-500/20 relative">
+    <div class="container lg:container h-16 mx-auto flex items-center justify-between md:justify-start px-3 md:px-0">
+      <a class="mr-5" href="/">
+        <img src="./img/needed.png" class="h-14 block">
+      </a>
+
+      <div class="flex items-center md:hidden">
+        <a href="login.html"
+          class="text-[15px] mr-3 bg-blue-700 pl-3 pr-3 pt-1 pb-2 rounded hover:bg-blue-800 font-semibold text-white"><i
+            class="fa-solid fa-user text-white"></i>
+          &nbsp;Login</a>
+        <span onclick="navbarResponsive();" class="cursor-pointer">
+          <i class="fas fa-bars bar text-xl"></i>
+        </span>
+      </div>
+
+      <div class="hidden md:flex justify-between w-full text-[15px] text-slate-600">
+        <ul class="flex items-center">
+          <li class="mr-4">
+            <a class="hover:text-slate-900 active" href="/">Find jobs</a>
+          </li>
+          <li class="mr-4">
+            <a class="hover:text-slate-900" href="companies.html">Company reviews</a>
+          </li>
+          <li class="">
+            <a class="hover:text-slate-900" href="salaries.html">Find salaries</a>
+          </li>
+        </ul>
+        <ul class="flex items-center">
+          <li class="mr-4">
+            <a class="hover:text-slate-900" href="#">Post your CV</a>
+          </li>
+          <li class="mr-4">
+            <a class="font-bold text-blue-800 hover:text-blue-900" href="login.html">Login</a>
+          </li>
+          <li>
+            <div class="h-6 w-[.25px] bg-blue-900 opacity-50"></div>
+          </li>
+          <li class="ml-4">
+            <a class="hover:text-slate-900" href="#">Employers / Post Jobs</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <ul class="hidden absolute top-16 w-full bg-blue-50 text-slate-600 font-semibold text-base" id="navRes">
+      <li><a href="" class="block border-t border-b py-3 pl-4">Jobs</a></li>
+      <li><a href="" class="block border-b py-3 pl-4">Companies</a></li>
+      <li><a href="" class="block border-b py-3 pl-4">Salaries</a></li>
+      <li class="block h-3 bg-[#eee]"></li>
+      <li><a href="" class="block border-b py-3 pl-4">Profile</a></li>
+      <li><a href="" class="block border-b py-3 pl-4">Favorite</a></li>
+      <li class="block h-3 bg-[#eee]"></li>
+      <li><a href="" class="block border-b py-3 pl-4">Account settings</a></li>
+      <li><a href="" class="block border-b py-3 pl-4">Contack settings</a></li>
+      <li><a href="" class="block border-b py-3 pl-4">Privacy settings</a></li>
+      <li><a href="" class="block border-b py-3 pl-4">Logout</a></li>
+    </ul>
+  </nav>
+
+  <section>
+    <div class="container mx-auto pt-14">
+      <div class="max-w-sm md:max-w-4xl lg:max-w-6xl mx-auto">
+        <div class="text-2xl font-bold mb-4">Browse top paying jobs by industry</div>
+        <div class="dropdown inline-block relative mb-5">
+          <button
+            class="dropdown-button border text-blue-900 font-semibold py-2.5 px-4 rounded-lg inline-flex items-center cursor-pointer hover:border-blue-800 hover:bg-blue-50"
+            id="dropdownButton">
+            <span class="dropdown-button mr-1 font-sans font-bold">Choose by category </span>
+            <svg class="dropdown-button fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+              <path class="dropdown-button"
+                d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+            </svg>
+          </button>
+
+          <ul
+            class="dropdown-menu hidden absolute text-gray-700 rounded-lg border border-blue-800 bg-white mt-1 overflow-hidden"
+            id="dropdownMenu">
+            <li><a class="rounded-t-lg hover:bg-slate-200 py-2.5 px-4 block whitespace-nowrap" href="#">One</a></li>
+            <li><a class="hover:bg-gray-200 py-2.5 px-4 block whitespace-nowrap" href="#">Two</a></li>
+            <li><a class="rounded-b-lg hover:bg-gray-200 py-2.5 px-4 block whitespace-nowrap" href="#">Three is the
+                magic number</a></li>
+          </ul>
+        </div>
+        <div class="grid grid-cols-1 gap-2 md:grid-cols-2 lg:grid-cols-3 lg:gap-4 mb-10">
+          <div class="border p-4 rounded-lg hover:border-blue-800">
+            <a class="inline-block font-bold mb-1 hover:underline cursor-pointer">Server</a>
+            <div class="flex justify-between">
+              <div class="text-sm">Average salary</div>
+              <div class="font-semibold text-sm">IDR 102,000,000 per year</div>
+            </div>
+          </div>
+          <div class="border p-4 rounded-lg hover:border-blue-800">
+            <a class="inline-block font-bold mb-1 hover:underline cursor-pointer">Server</a>
+            <div class="flex justify-between">
+              <div class="text-sm">Average salary</div>
+              <div class="font-semibold text-sm">IDR 102,000,000 per year</div>
+            </div>
+          </div>
+          <div class="border p-4 rounded-lg hover:border-blue-800">
+            <a class="inline-block font-bold mb-1 hover:underline cursor-pointer">Server</a>
+            <div class="flex justify-between">
+              <div class="text-sm">Average salary</div>
+              <div class="font-semibold text-sm">IDR 102,000,000 per year</div>
+            </div>
+          </div>
+          <div class="border p-4 rounded-lg hover:border-blue-800">
+            <a class="inline-block font-bold mb-1 hover:underline cursor-pointer">Server</a>
+            <div class="flex justify-between">
+              <div class="text-sm">Average salary</div>
+              <div class="font-semibold text-sm">IDR 102,000,000 per year</div>
+            </div>
+          </div>
+          <div class="border p-4 rounded-lg hover:border-blue-800">
+            <a class="inline-block font-bold mb-1 hover:underline cursor-pointer">Server</a>
+            <div class="flex justify-between">
+              <div class="text-sm">Average salary</div>
+              <div class="font-semibold text-sm">IDR 102,000,000 per year</div>
+            </div>
+          </div>
+          <div class="border p-4 rounded-lg hover:border-blue-800">
+            <a class="inline-block font-bold mb-1 hover:underline cursor-pointer">Server</a>
+            <div class="flex justify-between">
+              <div class="text-sm">Average salary</div>
+              <div class="font-semibold text-sm">IDR 102,000,000 per year</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-2xl font-bold mb-4">Browse top paying jobs by industry</div>
+        <div class="dropdown inline-block relative mb-5">
+          <button
+            class="dropdown-button border text-blue-900 font-semibold py-2.5 px-4 rounded-lg inline-flex items-center cursor-pointer hover:border-blue-800 hover:bg-blue-50"
+            id="dropdownButton">
+            <span class="dropdown-button mr-1 font-sans font-bold">Choose by category </span>
+            <svg class="dropdown-button fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+              <path class="dropdown-button" d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+            </svg>
+          </button>
+        
+          <ul
+            class="dropdown-menu hidden absolute text-gray-700 rounded-lg border border-blue-800 bg-white mt-1 overflow-hidden"
+            id="dropdownMenu">
+            <li><a class="rounded-t-lg hover:bg-slate-200 py-2.5 px-4 block whitespace-nowrap" href="#">One</a></li>
+            <li><a class="hover:bg-gray-200 py-2.5 px-4 block whitespace-nowrap" href="#">Two</a></li>
+            <li><a class="rounded-b-lg hover:bg-gray-200 py-2.5 px-4 block whitespace-nowrap" href="#">Three is the
+                magic number</a></li>
+          </ul>
+        </div>
+        <div class="grid grid-cols-1 gap-2 md:grid-cols-2 lg:grid-cols-3 lg:gap-4 mb-10">
+          <a href="" class="block border p-4 rounded-lg hover:border-blue-800 group">
+            <div class="flex items-center justify-between group">
+              <div class="flex items-center">
+                <img src="https://d2q79iu7y748jz.cloudfront.net/s/_squarelogo/64x64/e17bdacd93d298b4601d675e7c1b986d" alt=""
+                  class="w-16 h-16 rounded border ">
+                <span class="ml-4 font-bold group-hover:underline">Traveloka</span>
+              </div>
+              <div class="font-semibold"> > </div>
+            </div>
+          </a>
+          <a href="" class="block border p-4 rounded-lg hover:border-blue-800 group">
+            <div class="flex items-center justify-between group">
+              <div class="flex items-center">
+                <img src="https://d2q79iu7y748jz.cloudfront.net/s/_squarelogo/64x64/e17bdacd93d298b4601d675e7c1b986d" alt=""
+                  class="w-16 h-16 rounded border ">
+                <span class="ml-4 font-bold group-hover:underline">Traveloka</span>
+              </div>
+              <div class="font-semibold"> > </div>
+            </div>
+          </a>
+          <a href="" class="block border p-4 rounded-lg hover:border-blue-800 group">
+            <div class="flex items-center justify-between group">
+              <div class="flex items-center">
+                <img src="https://d2q79iu7y748jz.cloudfront.net/s/_squarelogo/64x64/e17bdacd93d298b4601d675e7c1b986d" alt=""
+                  class="w-16 h-16 rounded border ">
+                <span class="ml-4 font-bold group-hover:underline">Traveloka</span>
+              </div>
+              <div class="font-semibold"> > </div>
+            </div>
+          </a>
+          <a href="" class="block border p-4 rounded-lg hover:border-blue-800 group">
+            <div class="flex items-center justify-between group">
+              <div class="flex items-center">
+                <img src="https://d2q79iu7y748jz.cloudfront.net/s/_squarelogo/64x64/e17bdacd93d298b4601d675e7c1b986d" alt=""
+                  class="w-16 h-16 rounded border ">
+                <span class="ml-4 font-bold group-hover:underline">Traveloka</span>
+              </div>
+              <div class="font-semibold"> > </div>
+            </div>
+          </a>
+          <a href="" class="block border p-4 rounded-lg hover:border-blue-800 group">
+            <div class="flex items-center justify-between group">
+              <div class="flex items-center">
+                <img src="https://d2q79iu7y748jz.cloudfront.net/s/_squarelogo/64x64/e17bdacd93d298b4601d675e7c1b986d" alt=""
+                  class="w-16 h-16 rounded border ">
+                <span class="ml-4 font-bold group-hover:underline">Traveloka</span>
+              </div>
+              <div class="font-semibold"> > </div>
+            </div>
+          </a>
+          <a href="" class="block border p-4 rounded-lg hover:border-blue-800 group">
+            <div class="flex items-center justify-between group">
+              <div class="flex items-center">
+                <img src="https://d2q79iu7y748jz.cloudfront.net/s/_squarelogo/64x64/e17bdacd93d298b4601d675e7c1b986d" alt=""
+                  class="w-16 h-16 rounded border ">
+                <span class="ml-4 font-bold group-hover:underline">Traveloka</span>
+              </div>
+              <div class="font-semibold"> > </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="border-t">
+    <div class="container mx-auto py-5">
+      <ul class="flex justify-center flex-wrap mx-auto max-w-sm md:max-w-full text-sm text-slate-700">
+        <li class="mx-2"><a href="" class="inline-block hover:text-slate-900 hover:underline py-2 px-3">Browse Jobs</a>
+        </li>
+        <li class="mx-2"><a href="" class="inline-block hover:text-slate-900 hover:underline py-2 px-3">Browse
+            Companies</a></li>
+        <li class="mx-2"><a href="" class="inline-block hover:text-slate-900 hover:underline py-2 px-3">Salaries</a>
+        </li>
+        <li class="mx-2"><a href="" class="inline-block hover:text-slate-900 hover:underline py-2 px-3">FAQs</a></li>
+        <li class="mx-2"><a href="" class="inline-block hover:text-slate-900 hover:underline py-2 px-3">About</a></li>
+        <li class="mx-2"><a href="" class="inline-block hover:text-slate-900 hover:underline py-2 px-3">Help Center</a>
+        </li>
+      </ul>
+      <hr class="my-4">
+      <p class="text-center text-sm text-slate-700">&copy; 2022 Footer. All Rights Reserved</p>
+    </div>
+  </footer>
+
+  <script>
+    const navRes = document.getElementById('navRes');
+
+    const navbarResponsive = () => {
+      navRes.classList.toggle('hidden');
+    };
+
+    const dropdown = document.getElementById("dropdownButton");
+    const dropdownMenu = document.getElementById("dropdownMenu");
+
+    dropdown.addEventListener("click", function () {
+      dropdownMenu.classList.toggle("hidden");
+    });
+
+    // Close the dropdown menu if the user clicks outside of it
+    window.onclick = function (event) {
+      if (!event.target.matches(".dropdown-button")) {
+        var dropdowns = document.getElementsByClassName("dropdown-menu");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains("hidden") === false) {
+            openDropdown.classList.add("hidden");
+          }
+        }
+      }
+    };
+
+  </script>
+</body>
+
+</html>

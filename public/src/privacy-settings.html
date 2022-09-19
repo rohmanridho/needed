@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <script src="../tailwindcss.min.js"></script>
+  <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+  <script src="https://kit.fontawesome.com/40c495c7a8.js" crossorigin="anonymous"></script>
+  <style type="tailwind/text">
+  </style>
+</head>
+
+<body>
+  <nav class="bg-blue-50 shadow shadow-blue-500/20 relative">
+    <div class="container lg:container h-16 mx-auto flex items-center justify-between md:justify-start px-3 md:px-0">
+      <a class="mr-5" href="/">
+        <img src="./img/needed.png" class="h-14 block">
+      </a>
+
+      <div class="flex items-center md:hidden">
+        <a href="login.html"
+          class="text-[15px] mr-3 bg-blue-700 pl-3 pr-3 pt-1 pb-2 rounded hover:bg-blue-800 font-semibold text-white"><i
+            class="fa-solid fa-user text-white"></i>
+          &nbsp;Login</a>
+        <span onclick="navbarResponsive();" class="cursor-pointer">
+          <i class="fas fa-bars bar text-xl"></i>
+        </span>
+      </div>
+
+      <div class="hidden md:flex justify-between w-full text-[15px] text-slate-600">
+        <ul class="flex items-center">
+          <li class="mr-4">
+            <a class="hover:text-slate-900 active" href="/">Find jobs</a>
+          </li>
+          <li class="mr-4">
+            <a class="hover:text-slate-900" href="companies.html">Company reviews</a>
+          </li>
+          <li class="">
+            <a class="hover:text-slate-900" href="salaries.html">Find salaries</a>
+          </li>
+        </ul>
+        <ul class="flex items-center">
+          <li class="mr-4">
+            <a class="hover:text-slate-900" href="#">Post your CV</a>
+          </li>
+          <li class="mr-4">
+            <a class="font-bold text-blue-800 hover:text-blue-900" href="login.html">Login</a>
+          </li>
+          <li>
+            <div class="h-6 w-[.25px] bg-blue-900 opacity-50"></div>
+          </li>
+          <li class="ml-4">
+            <a class="hover:text-slate-900" href="#">Employers / Post Jobs</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <ul class="hidden absolute top-16 w-full bg-blue-50 text-slate-600 font-semibold text-base" id="navRes">
+      <li><a href="" class="block border-t border-b py-3 pl-4">Jobs</a></li>
+      <li><a href="" class="block border-b py-3 pl-4">Companies</a></li>
+      <li><a href="" class="block border-b py-3 pl-4">Salaries</a></li>
+      <li class="block h-3 bg-[#eee]"></li>
+      <li><a href="" class="block border-b py-3 pl-4">Profile</a></li>
+      <li><a href="" class="block border-b py-3 pl-4">Favorite</a></li>
+      <li class="block h-3 bg-[#eee]"></li>
+      <li><a href="" class="block border-b py-3 pl-4">Account settings</a></li>
+      <li><a href="" class="block border-b py-3 pl-4">Contack settings</a></li>
+      <li><a href="" class="block border-b py-3 pl-4">Privacy settings</a></li>
+      <li><a href="" class="block border-b py-3 pl-4">Logout</a></li>
+    </ul>
+  </nav>
+
+  <section>
+    <div class="flex">
+      <!-- Sidebar -->
+      <div class="hidden md:block border-r border-blue-900/20 bg-blue-100 min-h-screen">
+        <div class="text-4xl text-center font-bold py-12">
+          Settings
+        </div>
+        <div class="w-80 text-xl text-gray-900 font-medium">
+          <a href="account-settings.html"
+            class="block p-4 mb-1 hover:border-l-4 hover:border-blue-900 hover:bg-gradient-to-r hover:from-blue-700/30">Account
+            settings</a>
+          <a href="contact-settings.html"
+            class="block p-4 mb-1 hover:border-blue-900 hover:bg-gradient-to-r hover:from-blue-700/30">Contact
+            information</a>
+          <a href="privacy-settings.html"
+            class="block p-4 mb-1 hover:border-l-4 border-l-4 border-blue-900 bg-gradient-to-r from-blue-700/30">Privacy
+            settings</a>
+        </div>
+      </div>
+
+      <!-- Content -->
+      <div class="w-full min-h-screen">
+        <div class="mx-auto max-w-sm md:max-w-2xl lg:max-w-4xl">
+          <h1 class="text-gray-900 font-bold text-2xl pt-8 pb-4 border-b">Contact information</h1>
+          <div class="mt-10">
+            <section class="mb-4 border-b">
+              <article class="mb-3">
+                <h2 class="text-xl font-bold text-gray-700">Types of data collected</h2>
+                <p class="text-gray-500">We collect different types of data depending on how you interact with us. This includes, for
+                  example, when you're on our
+                  site, responding to our promotional materials, and using our services to help you find a job. For
+                  example, we may
+                  collect your email address and resume information when you create your account. As another
+                  example, we may collect
+                  information about your activity on our site, such as the searches you conduct and jobs you apply
+                  to. For more
+                  information on the types of data we collect, check out Section 2 of our Privacy Policy.</p>
+              </article>
+              <article class="mb-3">
+                <h2 class="mb-2 text-xl font-bold text-gray-700">How my data is used and disclosed</h2>
+                <p class="text-gray-500">Indeed uses data to help people get jobs. How we use and disclose your data also depends on how
+                  you use our site. We go
+                  into much greater detail in Sections 4, 5 and 9 of our Privacy Policy explaining our use and
+                  disclosure of your data,
+                  but this can include to provide our services to you, to protect you when you use our site, and to
+                  measure, improve, and
+                  promote our services.</p>
+              </article>
+              <article class="mb-3">
+                <h2 class="mb-2 text-xl font-bold text-gray-700">Cookies</h2>
+                <p class="text-gray-500">Our Cookie Policy explains how we use cookies, web beacons and similar technologies, including
+                  some offered by
+                  third-parties, to collect data about you. For more information about our use of these technologies
+                  and your ability to
+                  opt-out of them, please check out our Cookie Policy.</p>
+              </article>
+              <article class="mb-3">
+                <h2 class="mb-2 text-xl font-bold text-gray-700">Accessing and Deleting My Data</h2>
+                <p class="text-gray-500">Indeed offers all of its users rights to access and delete their data, as detailed in Section 10
+                  of our Privacy Policy.
+                  To access or delete your data held by Indeed, just fill out this form.</p>
+              </article>
+              <article class="mb-4">
+                <h2 class="mb-2 text-xl font-bold text-gray-700">Make My Resume Private</h2>
+                <p class="text-gray-500">You can also set your Indeed Resumes to "private" by visiting your Resume Privacy Settings. For
+                  more information on what
+                  it means to have a "public" or "private" Indeed Resume, please visit Section 4 our Privacy Policy.
+                </p>
+              </article>
+            </section>
+            <section class="mb-4 border-b">
+              <article class="mb-4">
+                <h2 class="mb-2 text-xl font-bold text-gray-700">Calls from Employers on Indeed</h2>
+                <p class="text-gray-500">You are currently unsubscribed from receiving calls from Indeed and employers who use Indeed,
+                  including using automated
+                  call technology, forwarded, or recorded calls. Calls from employers on Indeed about your
+                  applications will not be
+                  forwarded to you. You will be subscribed again the next time you apply to a job through Indeed.
+                </p>
+              </article>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const navRes = document.getElementById('navRes');
+
+    const navbarResponsive = () => {
+      navRes.classList.toggle('hidden');
+    };
+  </script>
+</body>
+
+</html>

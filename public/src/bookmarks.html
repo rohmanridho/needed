@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <script src="../tailwindcss.min.js"></script>
+  <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+  <script src="https://kit.fontawesome.com/40c495c7a8.js" crossorigin="anonymous"></script>
+  <style type="tailwind/text">
+  </style>
+</head>
+
+<body>
+  <nav class="bg-blue-50 shadow shadow-blue-500/20 relative">
+    <div class="container lg:container h-16 mx-auto flex items-center justify-between md:justify-start px-3 md:px-0">
+      <a class="mr-5" href="/">
+        <img src="./img/needed.png" class="h-14 block">
+      </a>
+
+      <div class="flex items-center md:hidden">
+        <a href="login.html"
+          class="text-[15px] mr-3 bg-blue-700 pl-3 pr-3 pt-1 pb-2 rounded hover:bg-blue-800 font-semibold text-white"><i
+            class="fa-solid fa-user text-white"></i>
+          &nbsp;Login</a>
+        <span onclick="navbarResponsive();" class="cursor-pointer">
+          <i class="fas fa-bars bar text-xl"></i>
+        </span>
+      </div>
+
+      <div class="hidden md:flex justify-between w-full text-[15px] text-slate-600">
+        <ul class="flex items-center">
+          <li class="mr-4">
+            <a class="hover:text-slate-900 active" href="/">Find jobs</a>
+          </li>
+          <li class="mr-4">
+            <a class="hover:text-slate-900" href="companies.html">Company reviews</a>
+          </li>
+          <li class="">
+            <a class="hover:text-slate-900" href="salaries.html">Find salaries</a>
+          </li>
+        </ul>
+        <ul class="flex items-center">
+          <li class="mr-4">
+            <a class="hover:text-slate-900" href="#">Post your CV</a>
+          </li>
+          <li class="mr-4">
+            <a class="font-bold text-blue-800 hover:text-blue-900" href="login.html">Login</a>
+          </li>
+          <li>
+            <div class="h-6 w-[.25px] bg-blue-900 opacity-50"></div>
+          </li>
+          <li class="ml-4">
+            <a class="hover:text-slate-900" href="#">Employers / Post Jobs</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <ul class="hidden absolute top-16 w-full bg-blue-50 text-slate-600 font-semibold text-base" id="navRes">
+      <li><a href="" class="block border-t border-b py-3 pl-4">Jobs</a></li>
+      <li><a href="" class="block border-b py-3 pl-4">Companies</a></li>
+      <li><a href="" class="block border-b py-3 pl-4">Salaries</a></li>
+      <li class="block h-3 bg-[#eee]"></li>
+      <li><a href="" class="block border-b py-3 pl-4">Profile</a></li>
+      <li><a href="" class="block border-b py-3 pl-4">Favorite</a></li>
+      <li class="block h-3 bg-[#eee]"></li>
+      <li><a href="" class="block border-b py-3 pl-4">Account settings</a></li>
+      <li><a href="" class="block border-b py-3 pl-4">Contack settings</a></li>
+      <li><a href="" class="block border-b py-3 pl-4">Privacy settings</a></li>
+      <li><a href="" class="block border-b py-3 pl-4">Logout</a></li>
+    </ul>
+  </nav>
+
+  <section>
+    <div class="container mx-auto pt-14">
+      <div class="max-w-sm md:max-w-4xl lg:max-w-6xl mx-auto">
+        <div class="border-b">
+          <a href="bookmarks.html" class="font-semibold px-8 py-4 text-xl inline-block border-b-4 border-blue-800 hover:border-b-4 hover:border-blue-800 text-blue-900 ">Bookmarks</a>
+          <a href="stars.html" class="font-semibold px-8 py-4 text-xl inline-block text-blue-900/50">Stars</a>
+        </div>
+        <div class="flex justify-between items-center mt-8 py-2 hover:bg-blue-50">
+          <div class="flex items-center">
+            <img src="http://placeimg.com/150/150/people" alt="" class="w-16 h-16 rounded-full mr-3">
+            <div class="">
+              <div class="text-lg font-bold">Front-end</div>
+              <div class="font-medium text-slate-700">Gojek - Yogyakarta</div>
+            </div>
+          </div>
+          <button class="py-2.5 px-6 bg-blue-700 font-semibold text-white rounded-lg">Remove</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="border-t">
+    <div class="container mx-auto py-5">
+      <ul class="flex justify-center flex-wrap mx-auto max-w-sm md:max-w-full text-sm text-slate-700">
+        <li class="mx-2"><a href="" class="inline-block hover:text-slate-900 hover:underline py-2 px-3">Browse Jobs</a>
+        </li>
+        <li class="mx-2"><a href="" class="inline-block hover:text-slate-900 hover:underline py-2 px-3">Browse
+            Companies</a></li>
+        <li class="mx-2"><a href="" class="inline-block hover:text-slate-900 hover:underline py-2 px-3">Salaries</a>
+        </li>
+        <li class="mx-2"><a href="" class="inline-block hover:text-slate-900 hover:underline py-2 px-3">FAQs</a></li>
+        <li class="mx-2"><a href="" class="inline-block hover:text-slate-900 hover:underline py-2 px-3">About</a></li>
+        <li class="mx-2"><a href="" class="inline-block hover:text-slate-900 hover:underline py-2 px-3">Help Center</a>
+        </li>
+      </ul>
+      <hr class="my-4">
+      <p class="text-center text-sm text-slate-700">&copy; 2022 Footer. All Rights Reserved</p>
+    </div>
+  </footer>
+
+  <script>
+    const navRes = document.getElementById('navRes');
+
+    const navbarResponsive = () => {
+      navRes.classList.toggle('hidden');
+    };
+
+    const dropdown = document.getElementById("dropdownButton");
+    const dropdownMenu = document.getElementById("dropdownMenu");
+
+    dropdown.addEventListener("click", function () {
+      dropdownMenu.classList.toggle("hidden");
+    });
+
+    // Close the dropdown menu if the user clicks outside of it
+    window.onclick = function (event) {
+      if (!event.target.matches(".dropdown-button")) {
+        var dropdowns = document.getElementsByClassName("dropdown-menu");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains("hidden") === false) {
+            openDropdown.classList.add("hidden");
+          }
+        }
+      }
+    };
+
+  </script>
+</body>
+
+</html>

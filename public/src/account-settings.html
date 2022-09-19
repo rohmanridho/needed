@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <script src="../tailwindcss.min.js"></script>
+  <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+  <script src="https://kit.fontawesome.com/40c495c7a8.js" crossorigin="anonymous"></script>
+  <style type="tailwind/text">
+  </style>
+</head>
+
+<body>
+  <nav class="bg-blue-50 shadow shadow-blue-500/20 relative">
+    <div class="container lg:container h-16 mx-auto flex items-center justify-between md:justify-start px-3 md:px-0">
+      <a class="mr-5" href="/">
+        <img src="./img/needed.png" class="h-14 block">
+      </a>
+
+      <div class="flex items-center md:hidden">
+        <a href="login.html"
+          class="text-[15px] mr-3 bg-blue-700 pl-3 pr-3 pt-1 pb-2 rounded hover:bg-blue-800 font-semibold text-white"><i
+            class="fa-solid fa-user text-white"></i>
+          &nbsp;Login</a>
+        <span onclick="navbarResponsive();" class="cursor-pointer">
+          <i class="fas fa-bars bar text-xl"></i>
+        </span>
+      </div>
+
+      <div class="hidden md:flex justify-between w-full text-[15px] text-slate-600">
+        <ul class="flex items-center">
+          <li class="mr-4">
+            <a class="hover:text-slate-900 active" href="/">Find jobs</a>
+          </li>
+          <li class="mr-4">
+            <a class="hover:text-slate-900" href="companies.html">Company reviews</a>
+          </li>
+          <li class="">
+            <a class="hover:text-slate-900" href="salaries.html">Find salaries</a>
+          </li>
+        </ul>
+        <ul class="flex items-center">
+          <li class="mr-4">
+            <a class="hover:text-slate-900" href="#">Post your CV</a>
+          </li>
+          <li class="mr-4">
+            <a class="font-bold text-blue-800 hover:text-blue-900" href="login.html">Login</a>
+          </li>
+          <li>
+            <div class="h-6 w-[.25px] bg-blue-900 opacity-50"></div>
+          </li>
+          <li class="ml-4">
+            <a class="hover:text-slate-900" href="#">Employers / Post Jobs</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <ul class="hidden absolute top-16 w-full bg-blue-50 text-slate-600 font-semibold text-base" id="navRes">
+      <li><a href="" class="block border-t border-b py-3 pl-4">Jobs</a></li>
+      <li><a href="" class="block border-b py-3 pl-4">Companies</a></li>
+      <li><a href="" class="block border-b py-3 pl-4">Salaries</a></li>
+      <li class="block h-3 bg-[#eee]"></li>
+      <li><a href="" class="block border-b py-3 pl-4">Profile</a></li>
+      <li><a href="" class="block border-b py-3 pl-4">Favorite</a></li>
+      <li class="block h-3 bg-[#eee]"></li>
+      <li><a href="" class="block border-b py-3 pl-4">Account settings</a></li>
+      <li><a href="" class="block border-b py-3 pl-4">Contack settings</a></li>
+      <li><a href="" class="block border-b py-3 pl-4">Privacy settings</a></li>
+      <li><a href="" class="block border-b py-3 pl-4">Logout</a></li>
+    </ul>
+  </nav>
+
+  <section>
+    <div class="flex">
+      <!-- Sidebar -->
+      <div class="hidden md:block border-r border-blue-900/20 bg-blue-100 min-h-screen">
+        <div class="text-4xl text-center font-bold py-12">
+          Settings
+        </div>
+        <div class="w-80 text-xl text-gray-900 font-medium">
+          <a href="account-settings.html"
+            class="block p-4 mb-1 border-l-4 border-blue-900 bg-gradient-to-r from-blue-700/30"><i
+              class="fa-solid fa-user-gear"></i> &nbsp; Account
+            settings</a>
+          <a href="contact-settings.html"
+            class="block p-4 mb-1 hover:border-l-4 hover:border-blue-900 hover:bg-gradient-to-r hover:from-blue-700/30"><i
+              class="fa-solid fa-address-book"></i> &nbsp; Contact
+            information</a>
+          <a href="privacy-settings.html"
+            class="block p-4 mb-1 hover:border-l-4 hover:border-blue-900 hover:bg-gradient-to-r hover:from-blue-700/30"><i
+              class="fa-solid fa-shield"></i> &nbsp; Privacy
+            settings</a>
+        </div>
+      </div>
+
+      <!-- Content -->
+      <div class="w-full min-h-screen">
+        <div class="mx-auto max-w-sm md:max-w-2xl lg:max-w-4xl">
+          <h1 class="text-gray-900 font-bold text-2xl pt-8 pb-4 border-b">Account settings</h1>
+          <div class="flex flex-column md:flex-row md:justify-between flex-wrap mt-5 md:mt-10">
+            <div class="order-1 md:order-2 w-full md:w-1/3 mb-4 md:mb-0">
+              <form action="">
+                <label class="block mb-2 text-sm font-medium text-gray-900">Profile picture</label>
+                <input type="file" class="hidden" id="profile-picture">
+                <div class="relative inline-block">
+                  <img src="http://placeimg.com/150/150/people" alt="" class="rounded-full w-40 object-cover">
+                  <button type="button"
+                    class="text-sm font-medium text-gray-800 cursor-pointer absolute top-2 -right-3 bg-blue-100 py-2 px-4 rounded"
+                    onclick="document.getElementById('profile-picture').click()">
+                    Edit
+                  </button>
+                </div>
+              </form>
+            </div>
+            <div class="order-2 md:order-1 w-full md:w-3/5">
+              <form class="space-y-4 md:space-y-6" action="#">
+                <div>
+                  <label for="name" class="block mb-2 text-sm font-medium text-gray-900">Your name</label>
+                  <input type="name" name="name" id="name"
+                    class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
+                    placeholder="name@company.com" required="">
+                </div>
+                <div>
+                  <label for="email" class="block mb-2 text-sm font-medium text-gray-900">Your email</label>
+                  <input type="email" name="email" id="email"
+                    class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
+                    placeholder="name@company.com" required="">
+                </div>
+                <div>
+                  <label for="password" class="block mb-2 text-sm font-medium text-gray-900">Password</label>
+                  <input type="password" name="password" id="password" placeholder="••••••••"
+                    class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
+                    required="">
+                </div>
+                <button type="submit"
+                  class="w-full text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Login</button>
+              </form>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const navRes = document.getElementById('navRes');
+
+    const navbarResponsive = () => {
+      navRes.classList.toggle('hidden');
+    };
+  </script>
+</body>
+
+</html>
