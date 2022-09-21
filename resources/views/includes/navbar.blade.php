@@ -53,9 +53,15 @@
 																		<span class="rounded-t-md py-3 px-16 block whitespace-nowrap font-bold">{{ Auth::user()->email }}
 																		</span>
 																</li>
-																<li><a class="hover:bg-gray-100 py-3 px-4 block whitespace-nowrap font-medium"
+																@if (Auth::user()->roles_id == 1)
+																		<li><a class="hover:bg-gray-100 py-3 px-4 block whitespace-nowrap font-medium"
+																				href="{{ route('admin') }}"><i class="fa-solid fa-database"></i> &nbsp; {{ __('Dashboard') }}</a>
+																</li>
+																@else
+																		<li><a class="hover:bg-gray-100 py-3 px-4 block whitespace-nowrap font-medium"
 																				href="{{ route('dashboard') }}"><i class="fa-solid fa-database"></i> &nbsp; {{ __('Dashboard') }}</a>
 																</li>
+																@endif
 																<li><a class="hover:bg-gray-100 py-3 px-4 block whitespace-nowrap font-medium"
 																				href="{{ route('profile.show') }}"><i class="fa-solid fa-user"></i> &nbsp; {{ __('Profile') }}</a>
 																</li>

@@ -12,15 +12,22 @@
 
 								<!-- Navigation Links -->
 								<div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-										<x-jet-nav-link href="{{ route('create-industry') }}" :active="request()->routeIs('create-industry')">
-												{{ __('Create Industries') }}
-										</x-jet-nav-link>
-										<x-jet-nav-link href="{{ route('create-category') }}" :active="request()->routeIs('create-category')">
-												{{ __('Create Categories') }}
-										</x-jet-nav-link>
-										<x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
-												{{ __('Dashboard') }}
-										</x-jet-nav-link>
+										@if (Auth::user()->roles_id == 1)
+												<x-jet-nav-link href="{{ route('create-industry') }}" :active="request()->routeIs('create-industry')">
+														{{ __('Create Industries') }}
+												</x-jet-nav-link>
+												<x-jet-nav-link href="{{ route('create-category') }}" :active="request()->routeIs('create-category')">
+														{{ __('Create Categories') }}
+												</x-jet-nav-link>
+												<x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
+														{{ __('Dashboard') }}
+												</x-jet-nav-link>
+										@else
+												<x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
+														{{ __('Dashboard') }}
+												</x-jet-nav-link>
+										@endif
+
 								</div>
 						</div>
 

@@ -26,21 +26,27 @@ use App\Http\Livewire\Admin\Industry;
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/companies', [CompanyController::class, 'index'])->name('companies');
 
-Route::redirect('/admin', function() {
-        return view('dashboard');
-    });
-    
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
     'verified'
 ])->group(function () {
-    Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->name('dashboard');
-    Route::prefix('admin')->group(function () {
-        Route::get('industries', AdminIndustry::class)->name('create-industry');
-        Route::get('categories', AdminCategory::class)->name('create-category');
+    Route::group(['middleware' => 'CheckRole:employer'], function () {
+        Route::get('/dashboard', function () {
+            return view('dashboard');
+        })->name('dashboard');
     });
-    
+
+
+
+    Route::group(['middleware' => 'CheckRole:admin'], function () {
+        Route::prefix('admin')->group(function () {
+            Route::get('industries', AdminIndustry::class)->name('create-industry');
+            Route::get('categories', AdminCategory::class)->name('create-category');
+        });
+
+        Route::get('/admin', function () {
+            return redirect()->route('create-industry');
+        })->name('admin');
+    });
 });
