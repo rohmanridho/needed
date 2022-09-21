@@ -13,4 +13,19 @@ class Industry extends Model
     protected $fillable = [
         'name', 'slug', 'photo'
     ];
+
+    public function user()
+    {
+        return $this->hasOne(User::class);
+    }
+
+    public function industry()
+    {
+        return $this->belongsTo(Industry::class);
+    }
+
+    public function jobs()
+    {
+        return $this->hasMany(Job::class, 'industries_id', 'id');
+    }
 }
