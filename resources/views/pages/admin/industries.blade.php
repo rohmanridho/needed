@@ -3,7 +3,7 @@ dd($industries);
 @endphp --}}
 <x-slot name="header">
 		<h2 class="font-semibold text-xl text-gray-800 leading-tight">
-				{{ __('Dashboard Admin Industries') }}
+				{{ __('Industries - Dashboard Admin') }}
 		</h2>
 </x-slot>
 
@@ -17,7 +17,7 @@ dd($industries);
 
 <div class="py-8">
 		<div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-				<div class="bg-white overflow-hidden sm:rounded-lg">
+				<div class="bg-white overflow-hidden">
 						<div class="min-w-screen min-h-screen bg-gray-100 flex justify-center font-sans overflow-hidden">
 								<div class="w-full lg:w-5/6">
 										<div>

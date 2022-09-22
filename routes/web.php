@@ -1,12 +1,14 @@
 <?php
 
+use App\Http\Livewire\HomeLivewire;
+use App\Http\Livewire\Admin\Industry;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\CompanyController;
-use App\Http\Controllers\Admin\IndustryController;
 use App\Http\Livewire\Admin\AdminCategory;
 use App\Http\Livewire\Admin\AdminIndustry;
-use App\Http\Livewire\Admin\Industry;
+use App\Http\Livewire\Employer\EmployerCompany;
+use App\Http\Controllers\CompanyController;
+use App\Http\Controllers\Admin\IndustryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,12 +21,14 @@ use App\Http\Livewire\Admin\Industry;
 |
 */
 
-// Route::get('/jetstream', function () {
-//     return view('welcome');
-// });
+Route::get('/jet', function () {
+    return view('welcome');
+});
 
-Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/', HomeLivewire::class)->name('home');
 Route::get('/companies', [CompanyController::class, 'index'])->name('companies');
+
+Route::get('/employer/companies', EmployerCompany::class)->name('create-companies');
 
 Route::middleware([
     'auth:sanctum',
@@ -32,6 +36,15 @@ Route::middleware([
     'verified'
 ])->group(function () {
     Route::group(['middleware' => 'CheckRole:employer'], function () {
+        // Route::prefix('employer')->group(function() {
+        //     Route::get('companies', EmployerCompany::class)->name('create-companies');
+        // });
+
+        
+        Route::get('/employer', function () {
+            return redirect()->route('create-companies');
+        })->name('employer');
+        
         Route::get('/dashboard', function () {
             return view('dashboard');
         })->name('dashboard');

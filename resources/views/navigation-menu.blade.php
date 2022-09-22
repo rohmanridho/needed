@@ -14,15 +14,19 @@
 								<div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
 										@if (Auth::user()->roles_id == 1)
 												<x-jet-nav-link href="{{ route('create-industry') }}" :active="request()->routeIs('create-industry')">
-														{{ __('Create Industries') }}
+														{{ __('Industries') }}
 												</x-jet-nav-link>
 												<x-jet-nav-link href="{{ route('create-category') }}" :active="request()->routeIs('create-category')">
-														{{ __('Create Categories') }}
+														{{ __('Categories') }}
 												</x-jet-nav-link>
-												<x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
-														{{ __('Dashboard') }}
+												<x-jet-nav-link href="{{ route('create-companies') }}" :active="request()->routeIs('create=companies')">
+														{{ __('Companies') }}
 												</x-jet-nav-link>
 										@else
+
+												<x-jet-nav-link href="{{ route('create-companies') }}" :active="request()->routeIs('create-companies')">
+														{{ __('Companies') }}
+												</x-jet-nav-link>
 												<x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
 														{{ __('Dashboard') }}
 												</x-jet-nav-link>
@@ -172,7 +176,7 @@
 						<div class="flex items-center px-4">
 								@if (Laravel\Jetstream\Jetstream::managesProfilePhotos())
 										<div class="shrink-0 mr-3">
-												<img class="h-10 w-10 rounded-full object-cover" src="{{ Storage::url(Auth::user()->profile_photo_path) }}"
+												<img class="h-10 w-10 rounded-full object-cover" src="{{ Auth::user()->profile_photo_url }}"
 														alt="{{ Auth::user()->name }}" />
 										</div>
 								@endif

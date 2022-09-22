@@ -1,5 +1,5 @@
 {{-- @php
-		dd($industries)
+		dd([$modal, $chooseRoles])
 @endphp --}}
 @extends('layouts.main')
 
@@ -20,6 +20,10 @@
 												jobs</button>
 								</div>
 						</form>
+
+						{{-- <button type="button" wire:click="openModal()" class="bg-blue-100 hover:bg-blue-200 py-2 px-4 rounded">
+														Choose Role
+												</button> --}}
 				</div>
 		</div>
 

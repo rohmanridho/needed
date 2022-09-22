@@ -7,9 +7,9 @@
 				<div class="flex items-center md:hidden">
 						@guest
 								<a href="{{ route('login') }}"
-								class="text-[15px] mr-3 bg-blue-700 pl-3 pr-3 pt-1 pb-2 rounded hover:bg-blue-800 font-semibold text-white"><i
-										class="fa-solid fa-user text-white"></i>
-								&nbsp;Login</a>
+										class="text-[15px] mr-3 bg-blue-700 pl-3 pr-3 pt-1 pb-2 rounded hover:bg-blue-800 font-semibold text-white"><i
+												class="fa-solid fa-user text-white"></i>
+										&nbsp;Login</a>
 						@endguest
 						<span onclick="navbarResponsive();" class="cursor-pointer">
 								<i class="fas fa-bars bar text-xl"></i>
@@ -33,6 +33,10 @@
 										<li class="mr-4">
 												<a class="font-bold text-blue-800 hover:text-blue-900" href="{{ route('login') }}">Login</a>
 										</li>
+										<li class="mr-4">
+												<a class="font-bold text-blue-800 hover:text-blue-900 bg-blue-100 px-4 py-2 hover:bg-blue-200 rounded"
+														href="{{ route('register') }}">Register</a>
+										</li>
 								@endguest
 								@auth
 										<li class="mx-4">
@@ -48,27 +52,38 @@
 																		alt="{{ Auth::user()->name }}" />
 														</button>
 
-														<ul x-show="open" @click.away="open = false" class="absolute text-gray-700 top-12 right-1/2 translate-x-1/2 bg-white rounded-md shadow overflow-hidden">
+														<ul x-show="open" @click.away="open = false"
+																class="absolute text-gray-700 top-12 right-1/2 translate-x-1/2 bg-white rounded-md shadow overflow-hidden">
 																<li>
 																		<span class="rounded-t-md py-3 px-16 block whitespace-nowrap font-bold">{{ Auth::user()->email }}
 																		</span>
 																</li>
 																@if (Auth::user()->roles_id == 1)
 																		<li><a class="hover:bg-gray-100 py-3 px-4 block whitespace-nowrap font-medium"
-																				href="{{ route('admin') }}"><i class="fa-solid fa-database"></i> &nbsp; {{ __('Dashboard') }}</a>
-																</li>
-																@else
+																						href="{{ route('admin') }}"><i class="fa-solid fa-database"></i> &nbsp; {{ __('Dashboard') }}</a>
+																		</li>
+																@elseif (Auth::user()->roles_id == 2)
 																		<li><a class="hover:bg-gray-100 py-3 px-4 block whitespace-nowrap font-medium"
-																				href="{{ route('dashboard') }}"><i class="fa-solid fa-database"></i> &nbsp; {{ __('Dashboard') }}</a>
-																</li>
+																						href="{{ route('employer') }}"><i class="fa-solid fa-database"></i> &nbsp;
+																						{{ __('Dashboard') }}</a>
+																		</li>
+																@else
 																@endif
-																<li><a class="hover:bg-gray-100 py-3 px-4 block whitespace-nowrap font-medium"
-																				href="{{ route('profile.show') }}"><i class="fa-solid fa-user"></i> &nbsp; {{ __('Profile') }}</a>
+																<li>
+																		<a class="hover:bg-gray-100 py-3 px-4 block whitespace-nowrap font-medium"
+																				href="{{ route('profile.show') }}"><i class="fa-solid fa-user"></i> &nbsp; {{ __('Profile') }}
+																		</a>
 																</li>
-																<li><a class="hover:bg-gray-100 py-3 px-4 block whitespace-nowrap font-medium" href="star.html"><i
-																						class="fa-solid fa-star"></i> &nbsp; Stars</a></li>
-																<li><a class="hover:bg-gray-100 py-3 px-4 block whitespace-nowrap font-medium"
-																				href="account-settings.html"><i class="fa-solid fa-gear"></i> &nbsp; Settings</a></li>
+																<li>
+																		<a class="hover:bg-gray-100 py-3 px-4 block whitespace-nowrap font-medium" href="star.html"><i
+																						class="fa-solid fa-star"></i> &nbsp; Stars
+																		</a>
+																</li>
+																<li>
+																		<a class="hover:bg-gray-100 py-3 px-4 block whitespace-nowrap font-medium"
+																				href="account-settings.html"><i class="fa-solid fa-gear"></i> &nbsp; Settings
+																		</a>
+																</li>
 																<li class="text-center">
 																		<form id="logout-form" action="{{ route('logout') }}" method="POST" class="hidden">
 																				@csrf
@@ -86,7 +101,7 @@
 												<div class="h-6 w-[.25px] bg-blue-900 opacity-50"></div>
 										</li>
 										<li class="ml-4">
-												<a class="hover:text-slate-900" href="#">Employers / Post Jobs</a>
+												<a class="hover:text-slate-900" href="{{ route('create-companies') }}">Employers / Post Jobs</a>
 										</li>
 								@endauth
 						</ul>
